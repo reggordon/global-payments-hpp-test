@@ -1,3 +1,4 @@
+
 ## Environment Variables (`.env`) Setup
 
 This project requires a `.env` file in the project root with your sensitive configuration.
@@ -28,16 +29,24 @@ This project requires a `.env` file in the project root with your sensitive conf
 
    ```bash
    cp .env.example .env
+   ```
 
+2. Edit `.env` and fill in your actual merchant credentials.
+
+---
 
 ## Test Cards
+
 Use test card data from Global Payments documentation.
 
+---
+
 ## Notes
+
 - This project uses React to render the Hosted Fields via the Global Payments JS SDK.
 - The Express server generates the token and handles charging the nonce.
 
-
+---
 
 # Optional Global Payments HPP Parameters
 
@@ -71,3 +80,59 @@ Uncomment these **inside the `<form>`** that submits to the HPP URL, alongside t
 ---
 
 > **Note:** Uncomment and fill only the fields relevant to your integration. Check with your acquirer if any fields require special setup.
+
+---
+
+## To Run the App
+
+### 1. Install backend dependencies
+
+```bash
+cd server
+npm install
+```
+
+### 2. Install frontend dependencies
+
+```bash
+cd ../client
+npm install
+```
+
+### 3. Create and configure `.env` for backend
+
+```bash
+cd ../server
+cp .env.example .env
+```
+
+Edit `.env` to add your merchant credentials.
+
+---
+
+### 4. Start the backend server
+
+```bash
+node index.js
+```
+
+### 5. Start the frontend server (in a new terminal window/tab)
+
+```bash
+cd ../client
+npm start
+```
+
+### 6. Open your browser and navigate to:
+
+```
+http://localhost:3000
+```
+
+---
+
+### Notes:
+
+- Backend listens on port `5001` by default.
+- Frontend proxies API requests to backend automatically.
+- Ensure ports 3000 and 5001 are free before starting servers.
