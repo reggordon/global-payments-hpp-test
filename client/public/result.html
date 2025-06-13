@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Payment Result</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    .container {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      max-width: 600px;
+      text-align: center;
+    }
+    h1 {
+      color: #333;
+    }
+    .success {
+      color: green;
+      font-weight: bold;
+    }
+    .failure {
+      color: red;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Payment Result</h1>
+    <p id="result-message">Processing...</p>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const result = params.get("RESULT");
+    const message = params.get("MESSAGE");
+    const authCode = params.get("AUTHCODE");
+
+    let output = "";
+    if (result === "00") {
+      output = "<div class='success'>✅ Payment Successful!</div>";
+    } else if (result) {
+      output = "<div class='failure'>❌ Payment Failed. Result code: " + result + "</div>";
+    }
+
+    if (message) {
+      output += "<p>Message: " + decodeURIComponent(message) + "</p>";
+    }
+
+    if (authCode) {
+      output += "<p>Auth Code: " + authCode + "</p>";
+    }
+
+    document.getElementById("result-message").innerHTML = output;
+  </script>
+</body>
+</html>
