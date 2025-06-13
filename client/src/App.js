@@ -62,6 +62,30 @@ function App() {
               name="MERCHANT_RESPONSE_URL"
               value="http://localhost:3000/result.html"
           />
+
+            {/* Additional optional parameters (commented out) */}
+
+              {/* <input type="hidden" name="AUTO_SETTLE_FLAG" value="1" /> */}
+              {/* <input type="hidden" name="HPP_VERSION" value="2" /> */}
+              {/* <input type="hidden" name="HPP_SELECT_STYLES" value="Y" /> */}
+              {/* <input type="hidden" name="HPP_RESPONSE_MODE" value="simple" /> */}
+              {/* <input type="hidden" name="CVC_PRESENT" value="1" /> */}
+              {/* <input type="hidden" name="CVC_REQUIRED" value="1" /> */}
+              {/* <input type="hidden" name="COMMENT1" value="Your comment here" /> */}
+              {/* <input type="hidden" name="COMMENT2" value="Another comment" /> */}
+              {/* <input type="hidden" name="ORDER_DESCRIPTION" value="Order description" /> */}
+              {/* <input type="hidden" name="EMAIL" value="customer@example.com" /> */}
+              {/* <input type="hidden" name="BILLING_ADDRESS1" value="123 Main Street" /> */}
+              {/* <input type="hidden" name="BILLING_ADDRESS2" value="Suite 100" /> */}
+              {/* <input type="hidden" name="BILLING_CITY" value="New York" /> */}
+              {/* <input type="hidden" name="BILLING_POSTCODE" value="10001" /> */}
+              {/* <input type="hidden" name="BILLING_COUNTRY" value="US" /> */}
+              {/* <input type="hidden" name="SHIPPING_ADDRESS1" value="456 Other Street" /> */}
+              {/* <input type="hidden" name="SHIPPING_CITY" value="Boston" /> */}
+              {/* <input type="hidden" name="SHIPPING_POSTCODE" value="02101" /> */}
+              {/* <input type="hidden" name="SHIPPING_COUNTRY" value="US" /> */}
+              {/* <input type="hidden" name="HPP_LANG" value="en" /> */}
+              {/* <input type="hidden" name="MERCHANT_CUSTOMER_REFERENCE" value="customer-123" /> */}
           <button type="submit">Pay Now</button>
         </form>
       </div>
