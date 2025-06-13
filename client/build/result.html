@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Payment Result</title>
+</head>
+<body>
+  <h1>Payment Result</h1>
+  <div id="result-message">Processing...</div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const result = params.get("RESULT");
+    const message = params.get("MESSAGE");
+    const authCode = params.get("AUTHCODE");
+
+    let output = "";
+    if (result === "00") {
+      output = "✅ Payment Successful!";
+    } else if (result) {
+      output = "❌ Payment Failed. Result code: " + result;
+    }
+
+    if (message) {
+      output += "<br/>Message: " + decodeURIComponent(message);
+    }
+
+    if (authCode) {
+      output += "<br/>Auth Code: " + authCode;
+    }
+
+    document.getElementById("result-message").innerHTML = output;
+  </script>
+</body>
+</html>
