@@ -7,10 +7,10 @@ This project requires a `.env` file in the project root with your sensitive conf
 
 | Variable    | Description                             | Example                                          |
 |-------------|-------------------------------------|-------------------------------------------------|
-| MERCHANT_ID | Your Global Payments merchant ID    | `MERCHANT_ID=regtest`                            |
-| ACCOUNT     | Your account ID                     | `ACCOUNT=wallets`                                |
-| SECRET      | Secret key for SHA1 hashing         | `SECRET=2A9wkRXR6w`                              |
-| CURRENCY    | Currency code, uppercase only       | `CURRENCY=EUR`                                   |
+| MERCHANT_ID | Your Global Payments merchant ID    | `MERCHANT_ID=******`                            |
+| ACCOUNT     | Your account ID                     | `ACCOUNT=*******`                                |
+| SECRET      | Secret key for SHA1 hashing         | `SECRET=****8`                              |
+| CURRENCY    | Currency code, uppercase only       | `CURRENCY=****`                                   |
 | HPP_URL     | Hosted Payment Page endpoint URL    | `HPP_URL=https://pay.sandbox.realexpayments.com/pay` |
 
 ---
